@@ -1,0 +1,552 @@
+@charset "UTF-8";
+
+/*==== RESET ====*/
+html, body, h1, h2, h3, h4, h5, h6, p, a, ul, li, article, aside, footer, header, nav, section  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+main, article, aside, footer, header, nav, section {
+    display: block;
+    width: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+
+/*=== Global and top-level styles ===*/
+
+*:focus {
+    border: thin solid #aa210f;
+}
+
+aside, #header {
+    display: block;
+    padding-top: 3.5em; 
+}
+
+#menu, aside, footer {
+    display: block;
+    background-color: #41403c;
+    color: #edefee;
+}
+
+
+body {
+    background-color: #eddede;
+    font-family: sans-serif;
+}
+
+/*--- menu bar ---*/ /*notre menu*/
+#menu {
+    z-index: 1100; /*met une ligne*/
+    border-bottom: thin solid #1b1f14;
+    border-right: thin solid #1b1f14;
+    border-left: thin solid #1b1f14;
+    text-align: center;
+}
+
+#menu a {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    margin: auto; 
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+#menu li {
+    display: inline;
+    /*border-top: thin solid #1b1f14;
+    border-bottom: thin solid #1b1f14;
+    border-right: thin solid #1b1f14;
+    border-left: thin solid #1b1f14;*/
+    vertical-align: middle;
+    font-size: 100%;
+}
+#menu li ul {
+    border-bottom: thin solid #1b1f14;
+    padding-left: 1em;
+}
+#menu a:active, #menu a:hover, #menu a:focus {
+    background-color: #aa210f; /*quand tu passes sur un truc sans appuyer*/
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 5cm;
+}
+
+#display2{
+    display: block;
+    width: auto;
+    height: 5cm;
+    float: left;
+    border-radius: 30px;
+    border-width: thick;
+    border: solid #41403c;
+    position: relative;
+    right: 10px;
+}
+#display3{ /*incon pour le bouton haut*/
+    display: block;
+    max-width: 1.5cm;
+    height: auto;
+    
+}
+
+
+/*--- aside bar ---*/
+aside {
+    border-top: thin solid #1f1514; 
+    padding-bottom: 1em;
+}
+
+aside a {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    font-size: 150%;
+}
+aside a:active, aside a:hover, aside a:focus {
+    background-color: #aa210f; /*quand tu passes sur un truc sans appuyer*/
+}
+/*aside a:after {
+    content: "❯";
+    padding: 0 .3em;
+}*/
+
+/*=== Main Header ===*/
+#header {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    text-align: center;
+    background-color: #aa210f;
+    border-bottom: thin solid #030e02;
+}
+
+#header h1 {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    color: #d08856;
+    text-shadow: 0.05em 0.05em 0.05em #41403c;
+    /*décalage horizontal, vertical, floutage, couleur*/
+}
+
+
+/*=== Footer ===*/
+footer {
+    border-top: thin solid #1b1f14;
+    padding: .5em 0; 
+    text-align: center;
+    line-height: 1.2;
+    color: #aa210f;
+}
+
+
+/*=== Main content ===*/
+main {
+    width: auto;
+    padding: .25em;
+    color: #000000;
+    background-color: #dfae8b;
+}
+
+main p {
+    text-align: justify;
+    hyphens: auto;
+    margin: 1em 0;
+    color: rgb(0, 0, 0);
+}
+
+main a {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+main a:hover, main a:focus, main a:active {
+    background-color: #ecb212;
+}
+
+main h1:target, main h2:target, main h3:target {
+    background-color: #e09812;
+}
+
+main h1 {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: thin solid #1b1f14;
+    margin: 1em 0;
+}
+
+main h2, main h3 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-size: 120%;
+    font-weight: bold; 
+    color: #aa210f;
+}
+
+@media (min-width: 50em) and (orientation: landscape) {
+    body {
+        background-color: #aa210f;
+    }
+
+    #header h1 {
+        font-size: 150%;
+    }
+    #menu {
+        margin-left: 17.3%;
+    }
+
+    #menu a[rel=toc] {
+        display: none;
+    }
+
+    aside {
+        /*position: fixed;
+        width: 20%;
+        top: 0;
+        height: auto;
+        padding-bottom: 2.5em;*/
+        position: fixed; /*permet au aside de descendre*/
+        /*font-size: 100%;*/
+        padding: 0;
+        /*padding-bottom: auto;*/
+        width: 17%; /*J'ai l'impression que ça ne sert à rien*/
+        max-width: 17%;
+        color: #1b1f14;
+
+        border: thin solid #1b1f14; /*est-ce qu'on fait des bords ?*/
+        top: 15em;
+        font-weight: bold; /*met en gras*/
+        background-color: #dfae8b;
+        list-style-type: none;
+    }
+    aside > ul > li {
+        display: block;
+        background-color: #d08856;
+        padding: .5em;
+        margin: 0.25em;
+        /*margin-left: 0;*/
+        border: thin solid #1b1f14;
+        box-shadow: 0.1em 0.1em 0.1em rgba(42, 50, 27, 0.6);
+        list-style-type: none;
+    }
+    aside > ul > li:hover {
+        color: #edefee;
+        background-color: #d08856;
+        list-style: none;
+    }
+    aside a {
+        font-size: 80%;
+    }
+
+    main, #header, #footer {
+        margin-left: 17.3%;
+        /*margin-right: 20.3%;*/
+    }
+
+
+    footer {
+        /*position: fixed;*/
+        z-index: 1100;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    footer p {
+        /*margin: 0 0.5em;*/
+        color: #edefee;
+    }
+}
+
+
+
+
+@media (min-width: 70em){
+    #menu {
+        margin: 0;
+    }
+    
+    #menu a[rel=toc]{
+        display: none;
+
+    }
+
+    html {
+        background-color: #dfae8b;
+    }
+
+    body {
+        background: none;
+        margin: 0 0.3em 0 0.3em;
+        max-width: 100em; /*change la taille globale de l'affichage*/
+    }
+
+    #content {
+        padding: 0;
+        padding-bottom: 2em;
+        /*width: 60%;*/
+        width: 60em; /*change la taille du content*/
+        margin-left: 20%;
+        float: left;
+    }
+    #content > p, #content h1 {
+        margin-left: .2em;
+        margin-right: .2em; 
+    }
+
+    section{
+        display: block;
+        border: solid #41403c;
+        background-color: #d08856;
+        width: 60em;
+        padding: 1em;
+        margin-top: 3px;
+    }
+
+    #lien{
+        display: block;
+        width: max-content;
+        border: 2px solid #41403c;
+        background-color: #dfae8b;
+        /*box-shadow: 2px 3px 5px 2px rgba(42, 50, 27, 0.6); ombre pour la boite, on garde ? -valeurs à modifier*/
+        padding: 0.25em;
+        margin-left: 90%;
+        color: #41403c;
+    }
+
+    footer {
+        height: auto;
+        position: static;
+        clear: both;
+        text-align: center;
+        width: 100%;
+        max-width: 100em;
+        margin: 0;
+        padding: .1em 0;
+        background-color: #41403c;
+        color: #edefee;
+        border: thin solid #1b1f14;
+        border-bottom: none;
+    }
+
+    #header {
+        font-size: 100%;
+        height: 10em;
+        margin: 0;
+        padding: 0 1em;
+        color: #edefee;
+        border: thin solid #1b1f14;
+        border-top: none;
+        text-shadow: 0.15em 0.15em 0.1em rgba(42, 50, 27, 0.6);
+    }
+    #header h1 {
+        font-size: 300%;
+        padding-top: 1em; /*les deux padding pour centrer h1*/
+        padding-bottom: 2em;
+    }
+
+    aside {
+        position: fixed; /*permet au aside de descendre*/
+        font-size: 100%;
+        padding: 0;
+        padding-bottom: 0;
+        width: auto;
+        max-width: 14em;
+        color: #1b1f14;
+        border: none;
+        top: 15em;
+        font-weight: bold; /*met en gras*/
+        background-color: #dfae8b;
+
+    }
+    aside > ul > li {
+        display: block;
+        background-color: #d08856;
+        padding: .5em;
+        margin: 0.5em;
+        margin-left: 0;
+        border: thin solid #1b1f14;
+        box-shadow: 0.1em 0.1em 0.1em rgba(42, 50, 27, 0.6);
+    }
+    aside > ul > li:hover{
+        color: #1b1f14;
+        background-color: #d08856;
+    }
+
+    aside a {
+        display: inline;
+        padding: 0;
+        font-size: 100%;
+    }
+    aside a:after {
+        padding: 0;
+        content: none;
+    }
+    aside a:hover {
+        color: #41403c; /*met en surbrillance les lettres quand le cruseur passe dessus*/
+    }
+    .haut{ /*lié avec display3*/
+        display: grid;
+        position: fixed;
+        top: 80%;
+        right: 10em;
+        /*background-color: yellow;*/
+        border-radius: 30%;
+    }
+    .sous{
+        display: none;
+        list-style: none;
+        box-shadow: #aa210f;
+        background-color: #dfae8b ;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+    }
+    aside > ul li:hover .sous{
+        display: block;
+    }
+    .sous li{
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+    .sous a{
+        padding: 10px;
+        border-bottom: none;
+    }
+    .sous a:hover{
+        border-bottom: none;
+        background-color: #dfae8b;
+    }
+    .deroulant > a::after{
+        content:" ▼";
+        font-size: 12px;
+    }
+    
+    .conteneur{
+      margin: 50px 20px;
+      height: 1500px;
+    }
+    /*div {
+        /*width: 100px;
+        height: 100px;*/
+        /*position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    div {
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-name: example;
+    }*/
+    #para{
+        text-indent: 5%;
+    }
+    #para2{
+        padding-top: 1cm;
+        text-indent: 5%;
+    }
+    #para3{
+        font-style: italic;
+    }
+    #resume{
+        text-indent: 5%;
+        font-style: italic;
+    }
+    #resume2{
+        font-family: consolas;
+    }
+    .display{
+        border-radius: 25%;
+    }
+    mark{
+        background-color: #aa210f5e; 
+    }
+    #audio{
+        float: right;
+        text-align: center;
+    }
+    #presentation{
+        display: block;
+        text-align: justify;
+    }
+
+    #progress{
+        background-color: #02fc7f;
+        height: 3px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+    }
+    table{
+        border-collapse: collapse;
+        margin: 0 auto;
+        background-color: #d08856;
+    }
+    td, th {/* Mettre une bordure sur les td ET les th */
+        border: 1px solid black;
+    }
+    td{
+        text-align: center;
+    }
+    caption{
+        padding-top: 1cm;
+        padding-bottom: 1cm;
+        font-style: italic;
+        font-size: large;
+    }
+    #note{
+        font-style: italic;
+        font-size: small;
+        color: #1b1f14;
+    }
+    .deroulant {
+        font-family: sans-serif;
+    }
+    @keyframes grow {
+        0% { font-size: 0 }
+        100% { font-size: 20px }
+    }
+    @-webkit-keyframes grow {
+        0% { font-size: 0 }
+        100% { font-size: 20px }
+    }
+    .deroulant:hover .sous {
+        animation-name: grow;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: grow;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    
+}
+
+/*@keyframes example {
+    from {
+        background-color: #aa210f;
+    }
+    to {
+        background-color: #d08856;
+    }
+}*/
+
+

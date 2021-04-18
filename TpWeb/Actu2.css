@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*==== RESET ====*/
+html, body, h1, h2, h3, h4, h5, h6, p, a, ul, li, article, aside, footer, header, nav, section  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+main, article, aside, footer, header, nav, section {
+    display: block;
+    width: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+/*=== Main Header ===*/
+/*#header {
+    padding-right: 1em;
+    padding-left: 0;
+    padding-bottom: .2em;
+    text-align: left;
+    background-color: #a3b87a;
+    border-bottom: thin solid #1b1f14;
+}
+
+#header h1 {
+    font-size: 120%;
+    font-weight: bold;
+    color: red;
+}
+
+/*=== Main content ===*/
+/*main {
+    width: auto;
+    padding: .25em;
+    color: #1b1f14;
+    background-color: #e8edde;
+}
+
+main p {
+    text-align: justify;
+    hyphens: auto;
+    margin: 1em 0;
+    color: red;
+}
+
+main a {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+main h1 {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: thin solid #1b1f14;
+    margin: 1em 0;
+    color: blue;
+}
+
+main h2 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-size: 120%;
+    font-weight: bold; 
+    color: red;
+}
+*/
+
+p {
+    color: red;
+}
