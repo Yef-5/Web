@@ -40,7 +40,7 @@ aside, #header {
 
 
 body {
-    background-color: #eddede;
+    background-color: #dfae8b;
     font-family: sans-serif;
 }
 
@@ -79,6 +79,7 @@ body {
     background-color: #aa210f; /*quand tu passes sur un truc sans appuyer*/
 }
 
+/*---Image---*/
 img{
     display: block;
     margin: 0 auto;
@@ -103,7 +104,75 @@ img{
     height: auto;
     
 }
+/*image page actu*/
+.display{
+    border-radius: 25%;
+}
 
+/*---Style d'écriture---*/
+#para{
+    text-indent: 5%;
+}
+#para2{
+    padding-top: 1cm;
+    text-indent: 5%;
+}
+#para3{
+    font-style: italic;
+}
+mark{
+    background-color: #aa210f5e; 
+}
+#resume{
+    text-indent: 5%;
+    font-style: italic;
+}
+#resume2{
+    font-family: consolas;
+}
+#presentation{
+    display: block;
+    text-align: justify;
+    font-family: consolas;
+    border: thin #1b1f14;
+}
+
+
+
+/*---Tableau (dans Elon Musk)---*/
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #d08856;
+}
+td, th {/* Mettre une bordure sur les td ET les th */
+    border: 1px solid black;
+}
+td{
+    text-align: center;
+}
+caption{
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    font-style: italic;
+    font-size: large;
+}
+#note{
+    font-style: italic;
+    font-size: small;
+    color: #1b1f14;
+}
+
+/*Barre de progression*/
+#progress{
+    background-color: #02fc7f;
+    height: 3px;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+}
 
 /*--- aside bar ---*/
 aside {
@@ -150,7 +219,7 @@ footer {
     padding: .5em 0; 
     text-align: center;
     line-height: 1.2;
-    color: #aa210f;
+    color: #edefee;
 }
 
 
@@ -198,6 +267,23 @@ main h2, main h3 {
     color: #aa210f;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 50em) and (orientation: landscape) {
     body {
         background-color: #aa210f;
@@ -215,19 +301,11 @@ main h2, main h3 {
     }
 
     aside {
-        /*position: fixed;
-        width: 20%;
-        top: 0;
-        height: auto;
-        padding-bottom: 2.5em;*/
         position: fixed; /*permet au aside de descendre*/
-        /*font-size: 100%;*/
         padding: 0;
-        /*padding-bottom: auto;*/
         width: 17%; /*J'ai l'impression que ça ne sert à rien*/
         max-width: 17%;
         color: #1b1f14;
-
         border: thin solid #1b1f14; /*est-ce qu'on fait des bords ?*/
         top: 15em;
         font-weight: bold; /*met en gras*/
@@ -260,17 +338,18 @@ main h2, main h3 {
 
 
     footer {
-        /*position: fixed;*/
         z-index: 1100;
         bottom: 0;
         width: 100%;
         text-align: center;
     }
     footer p {
-        /*margin: 0 0.5em;*/
         color: #edefee;
     }
 }
+
+
+
 
 
 
@@ -455,69 +534,12 @@ main h2, main h3 {
         animation-direction: alternate;
         animation-name: example;
     }*/
-    #para{
-        text-indent: 5%;
-    }
-    #para2{
-        padding-top: 1cm;
-        text-indent: 5%;
-    }
-    #para3{
-        font-style: italic;
-    }
-    #resume{
-        text-indent: 5%;
-        font-style: italic;
-    }
-    #resume2{
-        font-family: consolas;
-    }
-    .display{
-        border-radius: 25%;
-    }
-    mark{
-        background-color: #aa210f5e; 
-    }
+
     #audio{
         float: right;
         text-align: center;
     }
-    #presentation{
-        display: block;
-        text-align: justify;
-    }
 
-    #progress{
-        background-color: #02fc7f;
-        height: 3px;
-        width: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
-    }
-    table{
-        border-collapse: collapse;
-        margin: 0 auto;
-        background-color: #d08856;
-    }
-    td, th {/* Mettre une bordure sur les td ET les th */
-        border: 1px solid black;
-    }
-    td{
-        text-align: center;
-    }
-    caption{
-        padding-top: 1cm;
-        padding-bottom: 1cm;
-        font-style: italic;
-        font-size: large;
-    }
-    #note{
-        font-style: italic;
-        font-size: small;
-        color: #1b1f14;
-    }
     .deroulant {
         font-family: sans-serif;
     }
